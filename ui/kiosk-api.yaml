@@ -1,0 +1,409 @@
+---
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: "Kiosk API"
+host: "zf1oua0eo3.execute-api.ap-northeast-2.amazonaws.com"
+basePath: "/dev"
+schemes:
+- "https"
+paths:
+  /menu:
+    get:
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      tags:
+        - Menu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Menu"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "GET"
+        type: "http"
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Menu"
+        required: true
+        schema:
+          $ref: "#/definitions/Menu"
+      tags:
+        - Menu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "http"
+    put:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Menu"
+        required: true
+        schema:
+          $ref: "#/definitions/Menu"
+      tags:
+        - Menu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "PUT"
+        type: "http"
+    delete:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Menu"
+        required: true
+        schema:
+          $ref: "#/definitions/Menu"
+      tags:
+        - Menu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "DELETE"
+        type: "http"
+    patch:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "Menu"
+        required: true
+        schema:
+          $ref: "#/definitions/Menu"
+      tags:
+        - Menu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "PATCH"
+        type: "http"
+  /side-menu:
+    get:
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      tags:
+        - SideMenu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/SideMenu"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/side_menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "GET"
+        type: "http"
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "SideMenu"
+        required: true
+        schema:
+          $ref: "#/definitions/SideMenu"
+      tags:
+        - SideMenu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/side_menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "POST"
+        type: "http"
+    put:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "SideMenu"
+        required: true
+        schema:
+          $ref: "#/definitions/SideMenu"
+      tags:
+        - SideMenu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/side_menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "PUT"
+        type: "http"
+    delete:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: false
+        type: "string"
+      - in: "body"
+        name: "SideMenu"
+        required: true
+        schema:
+          $ref: "#/definitions/SideMenu"
+      tags:
+        - SideMenu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/side_menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "DELETE"
+        type: "http"
+    patch:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "bmod"
+        in: "query"
+        required: true
+        type: "string"
+      - in: "body"
+        name: "SideMenu"
+        required: true
+        schema:
+          $ref: "#/definitions/SideMenu"
+      tags:
+        - SideMenu
+      responses:
+        200:
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/Result"
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: "200"
+        uri: "http://122.199.152.194:3000/side_menu.do"
+        requestParameters:
+          integration.request.querystring.bmod: "method.request.querystring.bmod"
+        passthroughBehavior: "when_no_match"
+        httpMethod: "PATCH"
+        type: "http"
+definitions:
+  Menu:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+        description: "성공여부"
+      errorCode:
+        type: "string"
+        description: "에러 코드"
+      message:
+        type: "string"
+        description: "메시지"
+      data:
+        type: "object"
+        properties:
+          menu_idx:
+            type: "string"
+            description: ""
+          category:
+            type: "string"
+            description: ""
+          name:
+            type: "string"
+            description: ""
+          calory:
+            type: "string"
+            description: ""
+          price:
+            type: "string"
+            description: ""
+          description:
+            type: "string"
+            description: ""
+          barcode:
+            type: "string"
+            description: ""
+          use_YN:
+            type: "string"
+            description: ""
+  SideMenu:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+        description: "성공여부"
+      errorCode:
+        type: "string"
+        description: "에러 코드"
+      message:
+        type: "string"
+        description: "메시지"
+      data:
+        type: "object"
+        properties:
+          side_menu_idx:
+            type: "string"
+            description: ""
+          menu_idx:
+            type: "string"
+            description: ""
+          name:
+            type: "string"
+            description: ""
+          calory:
+            type: "string"
+            description: ""
+          price:
+            type: "string"
+            description: ""
+          description:
+            type: "string"
+            description: ""
+          barcode:
+            type: "string"
+            description: ""
+          use_YN:
+            type: "string"
+            description: ""
+  Result:
+    type: "object"
+    properties:
+      success:
+        type: "boolean"
+        description: "성공여부"
+      errorCode:
+        type: "string"
+        description: "에러 코드"
+      message:
+        type: "string"
+        description: "메시지"
