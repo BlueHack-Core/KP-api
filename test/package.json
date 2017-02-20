@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "description": "dummy",
   "dependencies": {
+    "aws-api-gateway-client": "^0.1.12",
+    "chai": "^3.5.0"
   },
   "scripts": {
-    "postinstall": "find ./functions/* -name package.json -maxdepth 1 -execdir npm install \\;"
+    "test": "login.js"
   }
 }
